@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -430,10 +431,6 @@
                                 <exclude reference="OQc-BX-0Rz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Oxc-xz-KeN"/>
-                                <exclude reference="aCO-XQ-0fN"/>
-                                <exclude reference="u5n-jK-e2Y"/>
-                                <exclude reference="bjN-3y-ltJ"/>
                                 <exclude reference="G2j-OZ-khg"/>
                                 <exclude reference="JsC-q3-EVX"/>
                                 <exclude reference="Ywk-eP-oNb"/>
@@ -444,6 +441,10 @@
                                 <exclude reference="gAp-kt-sQW"/>
                                 <exclude reference="9YQ-w1-uyz"/>
                                 <exclude reference="gco-yN-vg7"/>
+                                <exclude reference="Oxc-xz-KeN"/>
+                                <exclude reference="aCO-XQ-0fN"/>
+                                <exclude reference="u5n-jK-e2Y"/>
+                                <exclude reference="bjN-3y-ltJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -456,10 +457,6 @@
                                 <include reference="OQc-BX-0Rz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Oxc-xz-KeN"/>
-                                <include reference="aCO-XQ-0fN"/>
-                                <include reference="u5n-jK-e2Y"/>
-                                <include reference="bjN-3y-ltJ"/>
                                 <include reference="G2j-OZ-khg"/>
                                 <include reference="JsC-q3-EVX"/>
                                 <include reference="Ywk-eP-oNb"/>
@@ -470,6 +467,10 @@
                                 <include reference="gAp-kt-sQW"/>
                                 <include reference="9YQ-w1-uyz"/>
                                 <include reference="gco-yN-vg7"/>
+                                <include reference="Oxc-xz-KeN"/>
+                                <include reference="aCO-XQ-0fN"/>
+                                <include reference="u5n-jK-e2Y"/>
+                                <include reference="bjN-3y-ltJ"/>
                             </mask>
                         </variation>
                     </view>
