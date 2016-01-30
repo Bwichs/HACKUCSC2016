@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vpd-gr-ZpT" id="fLQ-AN-sXs">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="18.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -235,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="47" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a0u-jV-JH9" id="YYF-Ks-45S">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-bW-QeQ">
@@ -454,6 +454,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofl-fH-I1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2097" y="336"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="TBU-W5-RXq">
+            <objects>
+                <viewController id="jvr-tn-mmc" customClass="ContactsViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VuL-ww-pGd"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsP-Ul-xYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VFg-d4-Lc2">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-29-lOo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="52" width="360" height="659"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dfS-29-lOo"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dfS-29-lOo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="contactsTable" destination="dfS-29-lOo" id="E2a-NG-eJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pH-cn-H5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784" y="336"/>
         </scene>
     </scenes>
 </document>
