@@ -23,7 +23,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         if currentUser != nil {
             // Do stuff with the user
             
-            self.performSegueWithIdentifier("go_to_app", sender: self)
+            //self.performSegueWithIdentifier("go_to_app", sender: self)
             
         } else {
             // Show the signup or login screen
@@ -96,9 +96,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     if return_user?["emailVerified"] as! Bool == true {
                         self.loading.stopAnimating()
                         dispatch_async(dispatch_get_main_queue()) {
-                            self.performSegueWithIdentifier(
+                            /*self.performSegueWithIdentifier(
                                 "go_to_app",
-                                sender: self)
+                                sender: self)*/
                         }
                     }
                     else {

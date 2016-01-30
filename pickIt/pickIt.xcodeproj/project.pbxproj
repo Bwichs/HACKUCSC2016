@@ -61,6 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A3E3861C5C89BD0045FF60 /* pickIt */ = {
+			isa = PBXGroup;
+			children = (
+				06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */,
+				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
+				81BA814C1A49DA1800E65899 /* LogInViewController.swift */,
+				814C3AC61B69877600E307BB /* Main.storyboard */,
+				27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */,
+			);
+			name = pickIt;
+			path = ParseStarterProject;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +88,7 @@
 			children = (
 				00A3E3821C5C7E210045FF60 /* CardUITableViewController.swift */,
 				00A3E3841C5C7E470045FF60 /* CardUITableViewCell.swift */,
-				81BA81471A49DA1800E65899 /* ParseStarterProject */,
+				00A3E3861C5C89BD0045FF60 /* pickIt */,
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
 				81BA81461A49DA1800E65899 /* Products */,
@@ -88,18 +101,6 @@
 				81BA81451A49DA1800E65899 /* pickIt.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
-			isa = PBXGroup;
-			children = (
-				06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */,
-				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				81BA814C1A49DA1800E65899 /* LogInViewController.swift */,
-				814C3AC61B69877600E307BB /* Main.storyboard */,
-				27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */,
-			);
-			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
@@ -157,7 +158,7 @@
 				TargetAttributes = {
 					81BA81441A49DA1800E65899 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = V652D3ELMP;
+						DevelopmentTeam = 4T547QHTBJ;
 					};
 				};
 			};
@@ -305,14 +306,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parse.pickIt;
 				PRODUCT_NAME = pickIt;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,14 +327,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parse.pickIt;
 				PRODUCT_NAME = pickIt;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
