@@ -224,7 +224,7 @@
                         <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="CardUI" rowHeight="200" id="a0u-jV-JH9">
-                                <rect key="frame" x="0.0" y="47" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a0u-jV-JH9" id="YYF-Ks-45S">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
