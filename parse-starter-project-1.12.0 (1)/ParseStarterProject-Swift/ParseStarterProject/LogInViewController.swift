@@ -10,13 +10,11 @@
 import UIKit
 import Parse
 
-var my_account : PFUser = PFUser()
-
 class LogInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var password: UITextField!
-    
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     
@@ -40,6 +38,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         // Handle the text field's user input through delegate callbacks
         emailAddress.delegate = self
         password.delegate = self
+        userName.delegate = self
+        userName.returnKeyType = UIReturnKeyType.Next
         emailAddress.returnKeyType = UIReturnKeyType.Next
         password.returnKeyType = UIReturnKeyType.Done
         emailAddress.autocorrectionType = .No
@@ -67,6 +67,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    
+    
     @IBAction func registerOrSignIn(sender: AnyObject) {
         var userEmailAddress = emailAddress.text
         let userPassword = password.text
@@ -92,7 +94,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 if return_user != nil {
                     //Verify email
                     if return_user?["emailVerified"] as! Bool == true {
-                        my_account = return_user!
                         self.loading.stopAnimating()
                         dispatch_async(dispatch_get_main_queue()) {
                             self.performSegueWithIdentifier(
