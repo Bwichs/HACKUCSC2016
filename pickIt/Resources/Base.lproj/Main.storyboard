@@ -27,7 +27,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="registerOrSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAj-Fe-ihR"/>
-                                    <segue destination="kAl-wC-Y2q" kind="show" id="qTD-zA-iwu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-LU-nEb">
@@ -213,33 +212,6 @@
             </objects>
             <point key="canvasLocation" x="301.5" y="336"/>
         </scene>
-        <!--News Feed View Controller-->
-        <scene sceneID="x6z-7Z-mHb">
-            <objects>
-                <viewController id="kAl-wC-Y2q" customClass="NewsFeedViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xaz-dD-7lZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="GUv-wu-jgC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CV5-Ns-dtm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-Y4-Iud">
-                                <rect key="frame" x="125" y="40" width="320" height="44"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EcR-Y4-Iud" id="HQP-JZ-IC0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zR4-O2-sJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="696" y="1041"/>
-        </scene>
         <!--CardUI Table View Controller-->
         <scene sceneID="I1V-Qo-0Yu">
             <objects>
@@ -308,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPQ-JV-vPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="1736"/>
+            <point key="canvasLocation" x="1233" y="336"/>
         </scene>
         <!--My Account View Controller-->
         <scene sceneID="vnZ-Qn-7IP">
@@ -481,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofl-fH-I1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="336"/>
+            <point key="canvasLocation" x="2097" y="336"/>
         </scene>
     </scenes>
 </document>
