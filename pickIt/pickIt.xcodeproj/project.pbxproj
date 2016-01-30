@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A3E3831C5C7E210045FF60 /* CardUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A3E3821C5C7E210045FF60 /* CardUITableViewController.swift */; };
+		00A3E3851C5C7E470045FF60 /* CardUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A3E3841C5C7E470045FF60 /* CardUITableViewCell.swift */; };
 		06D30B761C5C6CC2003BFE14 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */; };
 		27156EF21C5C620F0097ECA0 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A3E3821C5C7E210045FF60 /* CardUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUITableViewController.swift; sourceTree = "<group>"; };
+		00A3E3841C5C7E470045FF60 /* CardUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUITableViewCell.swift; sourceTree = "<group>"; };
 		06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsFeedViewController.swift; path = ../NewsFeedViewController.swift; sourceTree = "<group>"; };
 		27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				00A3E3821C5C7E210045FF60 /* CardUITableViewController.swift */,
+				00A3E3841C5C7E470045FF60 /* CardUITableViewCell.swift */,
 				81BA81471A49DA1800E65899 /* ParseStarterProject */,
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
@@ -191,9 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BA814D1A49DA1800E65899 /* LogInViewController.swift in Sources */,
+				00A3E3831C5C7E210045FF60 /* CardUITableViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				27156EF21C5C620F0097ECA0 /* MyAccountViewController.swift in Sources */,
 				06D30B761C5C6CC2003BFE14 /* NewsFeedViewController.swift in Sources */,
+				00A3E3851C5C7E470045FF60 /* CardUITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
