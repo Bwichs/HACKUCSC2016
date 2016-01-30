@@ -223,14 +223,6 @@
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="19" id="Vpd-gr-ZpT">
-                                <rect key="frame" x="0.0" y="28" width="600" height="19"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vpd-gr-ZpT" id="fLQ-AN-sXs">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="18.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="CardUI" rowHeight="200" id="a0u-jV-JH9">
                                 <rect key="frame" x="0.0" y="47" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -249,14 +241,23 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gR-7h-sPA">
                                                     <rect key="frame" x="8" y="31" width="221" height="107"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="5" y="31" width="195" height="107"/>
+                                                    </variation>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-94-KSY">
                                                     <rect key="frame" x="256" y="152" width="326" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="195" y="152" width="195" height="30"/>
+                                                    </variation>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8g-r7-NFq">
                                                     <rect key="frame" x="8" y="152" width="240" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="5" y="152" width="195" height="30"/>
+                                                    </variation>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msf-99-Gxn">
                                                     <rect key="frame" x="243" y="58" width="42" height="21"/>
@@ -266,6 +267,9 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="5" y="5" width="390" height="190"/>
+                                            </variation>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -490,6 +494,8 @@
                                 <exclude reference="dfS-29-lOo"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="iU2-XL-8Is"/>
+                                <exclude reference="vHw-xf-WYw"/>
                                 <exclude reference="CpU-RL-V3Q"/>
                                 <exclude reference="JYQ-UP-Bif"/>
                                 <exclude reference="Nxj-D4-oi5"/>
@@ -498,8 +504,6 @@
                                 <exclude reference="m0f-jW-b2j"/>
                                 <exclude reference="wKq-De-Jmb"/>
                                 <exclude reference="xtx-1F-HLM"/>
-                                <exclude reference="iU2-XL-8Is"/>
-                                <exclude reference="vHw-xf-WYw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -507,6 +511,8 @@
                                 <include reference="dfS-29-lOo"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="iU2-XL-8Is"/>
+                                <exclude reference="vHw-xf-WYw"/>
                                 <exclude reference="CpU-RL-V3Q"/>
                                 <include reference="JYQ-UP-Bif"/>
                                 <exclude reference="Nxj-D4-oi5"/>
@@ -515,8 +521,6 @@
                                 <include reference="m0f-jW-b2j"/>
                                 <exclude reference="wKq-De-Jmb"/>
                                 <include reference="xtx-1F-HLM"/>
-                                <include reference="iU2-XL-8Is"/>
-                                <exclude reference="vHw-xf-WYw"/>
                             </mask>
                         </variation>
                     </view>
