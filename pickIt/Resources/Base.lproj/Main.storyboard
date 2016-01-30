@@ -459,6 +459,23 @@
             </objects>
             <point key="canvasLocation" x="1978.5" y="336"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="r2v-Qj-4bN">
+            <objects>
+                <viewController id="qRO-gC-nAL" customClass="testViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SWc-PL-GHx"/>
+                        <viewControllerLayoutGuide type="bottom" id="AVP-0h-cqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s1n-Ia-geO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbR-IF-DBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2356.5" y="-438"/>
+        </scene>
         <!--Contacts View Controller-->
         <scene sceneID="TBU-W5-RXq">
             <objects>
