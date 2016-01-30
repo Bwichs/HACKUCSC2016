@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jvr-tn-mmc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -453,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofl-fH-I1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="336"/>
+            <point key="canvasLocation" x="1978.5" y="336"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="TBU-W5-RXq">
@@ -470,20 +470,53 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-29-lOo">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="52" width="360" height="659"/>
-                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfS-29-lOo" firstAttribute="top" secondItem="VuL-ww-pGd" secondAttribute="bottom" id="CpU-RL-V3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="dfS-29-lOo" secondAttribute="trailing" id="JYQ-UP-Bif"/>
+                            <constraint firstAttribute="trailing" secondItem="dfS-29-lOo" secondAttribute="trailing" id="Nxj-D4-oi5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfS-29-lOo" secondAttribute="trailing" constant="-20" id="Qbn-YI-ShY"/>
+                            <constraint firstItem="dfS-29-lOo" firstAttribute="leading" secondItem="VFg-d4-Lc2" secondAttribute="leading" id="Yiu-70-IJ1"/>
+                            <constraint firstItem="AsP-Ul-xYl" firstAttribute="top" secondItem="dfS-29-lOo" secondAttribute="bottom" id="iU2-XL-8Is"/>
+                            <constraint firstItem="dfS-29-lOo" firstAttribute="top" secondItem="VuL-ww-pGd" secondAttribute="bottom" id="m0f-jW-b2j"/>
+                            <constraint firstItem="AsP-Ul-xYl" firstAttribute="top" secondItem="dfS-29-lOo" secondAttribute="bottom" id="vHw-xf-WYw"/>
+                            <constraint firstItem="dfS-29-lOo" firstAttribute="leading" secondItem="VFg-d4-Lc2" secondAttribute="leadingMargin" constant="-20" id="wKq-De-Jmb"/>
+                            <constraint firstItem="dfS-29-lOo" firstAttribute="leading" secondItem="VFg-d4-Lc2" secondAttribute="leading" id="xtx-1F-HLM"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dfS-29-lOo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CpU-RL-V3Q"/>
+                                <exclude reference="JYQ-UP-Bif"/>
+                                <exclude reference="Nxj-D4-oi5"/>
+                                <exclude reference="Qbn-YI-ShY"/>
+                                <exclude reference="Yiu-70-IJ1"/>
+                                <exclude reference="m0f-jW-b2j"/>
+                                <exclude reference="wKq-De-Jmb"/>
+                                <exclude reference="xtx-1F-HLM"/>
+                                <exclude reference="iU2-XL-8Is"/>
+                                <exclude reference="vHw-xf-WYw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dfS-29-lOo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CpU-RL-V3Q"/>
+                                <include reference="JYQ-UP-Bif"/>
+                                <exclude reference="Nxj-D4-oi5"/>
+                                <exclude reference="Qbn-YI-ShY"/>
+                                <exclude reference="Yiu-70-IJ1"/>
+                                <include reference="m0f-jW-b2j"/>
+                                <exclude reference="wKq-De-Jmb"/>
+                                <include reference="xtx-1F-HLM"/>
+                                <include reference="iU2-XL-8Is"/>
+                                <exclude reference="vHw-xf-WYw"/>
                             </mask>
                         </variation>
                     </view>
