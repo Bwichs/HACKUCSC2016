@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D30B761C5C6CC2003BFE14 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */; };
 		27156EF21C5C620F0097ECA0 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsFeedViewController.swift; path = ../NewsFeedViewController.swift; sourceTree = "<group>"; };
 		27156EF11C5C620F0097ECA0 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				06D30B751C5C6CC2003BFE14 /* NewsFeedViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* LogInViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
@@ -190,6 +193,7 @@
 				81BA814D1A49DA1800E65899 /* LogInViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				27156EF21C5C620F0097ECA0 /* MyAccountViewController.swift in Sources */,
+				06D30B761C5C6CC2003BFE14 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
