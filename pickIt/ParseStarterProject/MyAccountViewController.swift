@@ -10,9 +10,10 @@ import UIKit
 import Parse
 class MyAccountViewController: UIViewController {
 
+
+    
     @IBOutlet weak var emailValue: UITextField!
     @IBOutlet weak var nameValue: UITextField!
-    @IBOutlet weak var scoreValue: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class MyAccountViewController: UIViewController {
                 if error == nil && myself != nil {
                     self.emailValue.text = myself!["email"]as? String
                     self.nameValue.text = myself!["username"]as?String
-                    self.scoreValue.text = myself!["score"]as?String
+
                 }
             
             }
@@ -37,7 +38,6 @@ class MyAccountViewController: UIViewController {
     func notEditingAccount(){
         emailValue.userInteractionEnabled = false
         nameValue.userInteractionEnabled = false
-        scoreValue.userInteractionEnabled = false
         editing = false
         editButtonItem().title = "Edit Account"
         
@@ -78,9 +78,9 @@ class MyAccountViewController: UIViewController {
         }
         if editing == true{
             notEditingAccount()
-            
         }
     }
+  
     /*
     // MARK: - Navigation
 
