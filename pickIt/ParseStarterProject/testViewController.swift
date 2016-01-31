@@ -53,7 +53,7 @@ public extension UIImageView {
      
      - parameter duration: custom animation duration
      */
-    func fadeIn(duration duration: NSTimeInterval = 1.0) {
+    /*func fadeIn(duration duration: NSTimeInterval = 1.0) {
         UIImageView.animateWithDuration(duration, animations: {
             self.alpha = 1.0
         })
@@ -68,6 +68,6 @@ public extension UIImageView {
         UIImageView.animateWithDuration(duration, animations: {
             self.alpha = 0.2
         })
-    }
+    }*/
     
 }

@@ -5,12 +5,52 @@
 //  Created by Loren Yeung on 29/4/2016.
 //  Copyright © 2016 Parse. All rights reserved.
 //
+/*objectId, firstImage, createdAt, updatedAt, ACL, secImage, productDescription, userName */
 
 import UIKit
 import Parse
 import ParseUI
 
+
 class CardUITableViewController: PFQueryTableViewController {
+    
+    /*
+        image1.image = UIImage(named: "example_image.png")
+        image2.image = UIImage(named: "example_image.png")
+        let tapGestureRecognizer1 = UITapGestureRecognizer(target:self, action:Selector("image1Tapped:"))
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target:self, action:Selector("image2Tapped:"))
+        image1.userInteractionEnabled = true
+        image1.addGestureRecognizer(tapGestureRecognizer1)
+        image2.userInteractionEnabled = true
+        image2.addGestureRecognizer(tapGestureRecognizer2)
+    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as! CardUITableViewCell
+        
+        print(currentCell.name!.text)
+    }
+    
+    func image1Tapped(img: AnyObject)
+    {
+        let im = img as! UITapGestureRecognizer
+        print("hello")
+        
+        //im.fadeOut()
+        //image2.fadeIn()
+    }
+    func image2Tapped(img: AnyObject)
+    {
+        let im = img as? UIImageView
+        im!.fadeOut()
+        //image2.fadeOut()
+        //image1.fadeIn()
+    }
+    
+    var currentObject : PFObject?
     
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -19,7 +59,7 @@ class CardUITableViewController: PFQueryTableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        self.parseClassName = "yourClass"
+        self.parseClassName = "Posts"
         self.textKey = "yourObject"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
@@ -28,12 +68,78 @@ class CardUITableViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     
     override func queryForTable() -> PFQuery {
-        let query = PFQuery(className: "yourClass")
-        query.orderByAscending("yourObject")
-        
+        let query = PFQuery(className: "Posts")
+        query.orderByAscending("createdAt")
         
         return query
     }
+    
+    //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("CardUI") as! CardUITableViewCell!
+        if cell == nil {
+            cell = CardUITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CardUI")
+        }
+        
+        // Extract values from the PFObject to display in the table cell
+        
+        cell.prodDesc.text = object!["productDescription"] as! String
+        cell.name.text = object!["userName"] as? String
+        
+        //cell.firstImage.image = object!["firstImage"] as! PFFile
+        
+        
+        if let carImage = object!["firstImage"] as? PFFile {
+            carImage.getDataInBackgroundWithBlock({
+                (imageData: NSData?, error NSError) -> Void in
+        //        if (error == nil) {
+                let image = UIImage(data:imageData!)
+                let tapGestureRecognizer1 = UITapGestureRecognizer(target:self, action:Selector("image1Tapped:"))
+                cell.firstImage.userInteractionEnabled = true
+                cell.firstImage.addGestureRecognizer(tapGestureRecognizer1)
+                cell.firstImage.image = image
+          //      }
+            })
+        }
+        
+        if let carImage = object!["secImage"] as? PFFile {
+            carImage.getDataInBackgroundWithBlock({
+                (imageData: NSData?, error NSError) -> Void in
+                //        if (error == nil) {
+                let image = UIImage(data:imageData!)
+                let tapGestureRecognizer2 = UITapGestureRecognizer(target:self, action:Selector("image2Tapped:"))
+                cell.secImage.userInteractionEnabled = true
+                cell.secImage.addGestureRecognizer(tapGestureRecognizer2)
+                cell.secImage.image = image
+                //      }
+            })
+        }
+        
+        // Date for cell subtitle
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+      //  let dateForText = object?["updatedAt"] as! NSDate
+      //  cell.Name.text = dateFormatter.stringFromDate(dateForText)
+        
+        return cell
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Get the new view controller using [segue destinationViewController].
+        let detailScene = segue.destinationViewController as? CardUITableViewController
+        
+        // Pass the selected object to the destination view controller.
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let row = Int(indexPath.row)
+            detailScene!.currentObject = objects?[row] as? PFObject
+        }
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +158,7 @@ class CardUITableViewController: PFQueryTableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
@@ -60,7 +166,7 @@ class CardUITableViewController: PFQueryTableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
-    }
+    }*/
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -117,4 +223,30 @@ class CardUITableViewController: PFQueryTableViewController {
     }
     */
 
+}
+
+public extension UIImageView {
+    
+    /**
+     Fade in a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeIn(duration duration: NSTimeInterval = 1.0) {
+        UIImageView.animateWithDuration(duration, animations: {
+            self.alpha = 1.0
+        })
+    }
+    
+    /**
+     Fade out a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeOut(duration duration: NSTimeInterval = 1.0) {
+        UIImageView.animateWithDuration(duration, animations: {
+            self.alpha = 0.2
+        })
+    }
+    
 }

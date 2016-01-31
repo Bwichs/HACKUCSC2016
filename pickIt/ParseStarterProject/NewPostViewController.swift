@@ -68,39 +68,32 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func submitChanges(sender: AnyObject) {
-        let currectId = PFUser.currentUser()?.objectId
-        let query = PFUser.query()
-        query!.getObjectInBackgroundWithId(currectId!) {
-            (myself: PFObject?, error: NSError?) -> Void in
-            if error == nil && myself != nil {
-                myself!["productDescription"] = self.productDes.text
-                
+        let object = PFObject(className: "Posts")
+
+                object["productDescription"] = self.productDes.text
+                object["userName"] = PFUser.currentUser()?.username
+        
                 let firstImageFile = "firstImage.jpg"
                 let secImageFile = "secImage.jpg"
                 
                 if let imageData = UIImageJPEGRepresentation(self.firstImage.image!, 0.5){
                     let imageFile = PFFile(name: firstImageFile, data: imageData)
-                    myself!["firstImage"] = imageFile
+                    object["firstImage"] = imageFile
                 }
-                myself!.saveInBackgroundWithBlock {
+                object.saveInBackgroundWithBlock {
                     (success, error) -> Void in
                 }
                 
                 if let imageDataSec = UIImageJPEGRepresentation(self.secImage.image!, 0.5){
                     let imageFileSec = PFFile(name: secImageFile, data: imageDataSec)
-                    myself!["secImage"] = imageFileSec
+                    object["secImage"] = imageFileSec
                 }
-                myself!.saveInBackgroundWithBlock {
+                object.saveInBackgroundWithBlock {
                     (success, error) -> Void in
                 }
                 
-            }
-            else {
-                print(error)
-            }
-        }
     }
-    
+
     
     /*
     // MARK: - Navigation
