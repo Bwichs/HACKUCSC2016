@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jvr-tn-mmc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nDC-Lc-e8i">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a0u-jV-JH9" id="YYF-Ks-45S">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-bW-QeQ">
@@ -570,13 +570,105 @@
             <objects>
                 <tableViewController id="nDC-Lc-e8i" customClass="ContactsViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LM4-ek-KA0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="0aF-UW-bDN">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" verticalHuggingPriority="120" translatesAutoresizingMaskIntoConstraints="NO" id="edE-BR-wSc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <items>
+                                        <navigationItem title="Invite Friends" id="xCb-Xy-qZY" userLabel="Invite Contacts">
+                                            <barButtonItem key="leftBarButtonItem" style="plain" id="czV-49-9ye">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hhf-mx-Vct">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Back"/>
+                                                </button>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                        <rect key="frame" x="-21" y="8" width="400" height="44"/>
+                                    </variation>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="edE-BR-wSc"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="edE-BR-wSc"/>
+                                </mask>
+                            </variation>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact_cell" id="zXF-zG-eVi">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zXF-zG-eVi" id="ZwQ-ma-95L">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-MG-4vF">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="leading" secondItem="ZwQ-ma-95L" secondAttribute="leadingMargin" constant="5" id="1Ls-EL-J47"/>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="leading" secondItem="ZwQ-ma-95L" secondAttribute="leadingMargin" id="3zL-0N-l4W"/>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="top" secondItem="ZwQ-ma-95L" secondAttribute="topMargin" constant="5" id="LtW-lw-our">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                        </constraint>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nhJ-MG-4vF" secondAttribute="bottom" constant="5" id="Mxs-EQ-AFk"/>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="leading" secondItem="ZwQ-ma-95L" secondAttribute="leadingMargin" id="juY-cn-tv8"/>
+                                        <constraint firstAttribute="trailing" secondItem="nhJ-MG-4vF" secondAttribute="trailing" constant="20" id="qyY-gP-WAg"/>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="top" secondItem="ZwQ-ma-95L" secondAttribute="topMargin" constant="5" id="uzG-Nw-ch1"/>
+                                        <constraint firstItem="nhJ-MG-4vF" firstAttribute="leading" secondItem="ZwQ-ma-95L" secondAttribute="leading" id="vMw-4J-iEg">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                        </constraint>
+                                        <constraint firstAttribute="bottom" secondItem="nhJ-MG-4vF" secondAttribute="bottom" constant="5" id="zwd-t9-Ue7">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                        </constraint>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="nhJ-MG-4vF"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="1Ls-EL-J47"/>
+                                            <exclude reference="3zL-0N-l4W"/>
+                                            <exclude reference="LtW-lw-our"/>
+                                            <exclude reference="Mxs-EQ-AFk"/>
+                                            <exclude reference="juY-cn-tv8"/>
+                                            <exclude reference="qyY-gP-WAg"/>
+                                            <exclude reference="uzG-Nw-ch1"/>
+                                            <exclude reference="vMw-4J-iEg"/>
+                                            <exclude reference="zwd-t9-Ue7"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="nhJ-MG-4vF"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="1Ls-EL-J47"/>
+                                            <exclude reference="3zL-0N-l4W"/>
+                                            <include reference="LtW-lw-our"/>
+                                            <exclude reference="Mxs-EQ-AFk"/>
+                                            <exclude reference="juY-cn-tv8"/>
+                                            <include reference="qyY-gP-WAg"/>
+                                            <exclude reference="uzG-Nw-ch1"/>
+                                            <exclude reference="vMw-4J-iEg"/>
+                                            <include reference="zwd-t9-Ue7"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -589,24 +681,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fy-MG-hM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2862" y="215.25"/>
-        </scene>
-        <!--Test View Controller-->
-        <scene sceneID="r2v-Qj-4bN">
-            <objects>
-                <viewController id="qRO-gC-nAL" customClass="testViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SWc-PL-GHx"/>
-                        <viewControllerLayoutGuide type="bottom" id="AVP-0h-cqc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s1n-Ia-geO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TbR-IF-DBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2356.5" y="-438"/>
         </scene>
     </scenes>
 </document>
