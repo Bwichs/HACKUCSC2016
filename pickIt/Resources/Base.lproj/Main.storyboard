@@ -618,6 +618,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-MG-4vF">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="contact_button:" destination="nDC-Lc-e8i" eventType="touchUpInside" id="z8U-WU-uDD"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -677,6 +680,9 @@
                             <outlet property="delegate" destination="nDC-Lc-e8i" id="15W-P1-hub"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="contactsTable" destination="LM4-ek-KA0" id="Mcz-CX-vxO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fy-MG-hM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
