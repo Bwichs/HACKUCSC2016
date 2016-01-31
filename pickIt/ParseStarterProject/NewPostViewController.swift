@@ -61,7 +61,6 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     @IBAction func submitChanges(sender: AnyObject) {
         let currectId = PFUser.currentUser()?.objectId
         let query = PFUser.query()
@@ -94,8 +93,8 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate {
                 print(error)
             }
         }
-        
     }
+    
     
     /*
     // MARK: - Navigation
