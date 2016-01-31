@@ -286,6 +286,23 @@
             </objects>
             <point key="canvasLocation" x="1233" y="336"/>
         </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="Zmm-Cy-ajc">
+            <objects>
+                <viewController id="Q2v-GH-jOW" customClass="NewPostViewController" customModule="pickIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CZT-P1-f3A"/>
+                        <viewControllerLayoutGuide type="bottom" id="mGA-Mb-FIB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EEi-kf-obw">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAU-gM-ay9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081.5" y="1307.25"/>
+        </scene>
         <!--My Account View Controller-->
         <scene sceneID="vnZ-Qn-7IP">
             <objects>
@@ -468,6 +485,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AVP-0h-cqc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s1n-Ia-geO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
