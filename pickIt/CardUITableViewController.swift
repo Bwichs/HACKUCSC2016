@@ -7,23 +7,50 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class CardUITableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    
+//    // Initialise the PFQueryTable tableview
+//    override init!(style: UITableViewStyle, className: String!) {
+//        super.init(style: style, className: className)
+//    }
+//    
+//    required init(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        
+//        // Configure the PFQueryTableView
+//        self.parseClassName = "yourClass"
+//        
+//        self.textKey = "yourObject"
+//        self.pullToRefreshEnabled = true
+//        self.paginationEnabled = false
+//    }
+//    
+//    // Define the query that will provide the data for the table view
+//    override func queryForTable() -> PFQuery! {
+//        var query = PFQuery(className: "yourClass")
+//        query.orderByAscending("yourObject")
+//        
+//        
+//        return query
+//    }
 
     // MARK: - Table view data source
 

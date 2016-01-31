@@ -96,9 +96,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     if return_user?["emailVerified"] as! Bool == true {
                         self.loading.stopAnimating()
                         dispatch_async(dispatch_get_main_queue()) {
-                            /*self.performSegueWithIdentifier(
-                                "go_to_app",
-                                sender: self)*/
+                            self.performSegueWithIdentifier(
+                                "LoginID",
+                                sender: self)
                         }
                     }
                     else {

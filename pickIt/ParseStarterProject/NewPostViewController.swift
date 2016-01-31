@@ -9,56 +9,62 @@
 import UIKit
 import Parse
 
-class NewPostViewController: UIViewController, UIImagePickerControllerDelegate {
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var productDes: UITextField!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secImage: UIImageView!
     
-    let imagePick = UIImagePickerController()
+    let imagePick1 = UIImagePickerController()
+    let imagePick2 = UIImagePickerController()
     
     @IBAction func loadFirst(sender: AnyObject) {
-        imagePick.allowsEditing = false;
-        imagePick.sourceType = .PhotoLibrary
+        imagePick1.allowsEditing = false;
+        imagePick1.sourceType = .PhotoLibrary
         
-        presentViewController(imagePick, animated: true, completion: nil)
+        presentViewController(imagePick1, animated: true, completion: nil)
     }
     
     @IBAction func loadSec(sender: AnyObject) {
-        imagePick.allowsEditing = false;
-        imagePick.sourceType = .PhotoLibrary
+        imagePick2.allowsEditing = false;
+        imagePick2.sourceType = .PhotoLibrary
         
-        presentViewController(imagePick, animated: true, completion: nil)
+        presentViewController(imagePick2, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePick1.delegate = self
+        imagePick2.delegate = self
+        
         // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func imagePickerController(
         picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                firstImage.contentMode = .ScaleAspectFit
-                firstImage.image = pickedImage
-                secImage.contentMode = .ScaleAspectFit
-                secImage.image = pickedImage
-            }
-            
+                if let pickedImage1 = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                    if picker == imagePick1 {
+                        firstImage.contentMode = .ScaleAspectFit
+                        firstImage.image = pickedImage1
+                    } else {
+                        secImage.contentMode = .ScaleAspectFit
+                        secImage.image = pickedImage1
+                    }
+                }
             dismissViewControllerAnimated(true, completion: nil)
     }
     
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func submitChanges(sender: AnyObject) {
@@ -73,15 +79,15 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate {
                 let secImageFile = "secImage.jpg"
                 
                 if let imageData = UIImageJPEGRepresentation(self.firstImage.image!, 0.5){
-                    let imageFileFirst = PFFile(name: firstImageFile, data: imageData)
-                    myself!["firstImage"] = imageFileFirst
+                    let imageFile = PFFile(name: firstImageFile, data: imageData)
+                    myself!["firstImage"] = imageFile
                 }
                 myself!.saveInBackgroundWithBlock {
                     (success, error) -> Void in
                 }
                 
-                if let imageData = UIImageJPEGRepresentation(self.secImage.image!, 0.5){
-                    let imageFileSec = PFFile(name: secImageFile, data: imageData)
+                if let imageDataSec = UIImageJPEGRepresentation(self.secImage.image!, 0.5){
+                    let imageFileSec = PFFile(name: secImageFile, data: imageDataSec)
                     myself!["secImage"] = imageFileSec
                 }
                 myself!.saveInBackgroundWithBlock {
