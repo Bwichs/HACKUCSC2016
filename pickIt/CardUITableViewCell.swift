@@ -16,13 +16,19 @@ class CardUITableViewCell: PFTableViewCell {
     @IBOutlet weak var prodDesc: UITextView!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secImage: UIImageView!
-    
+    @IBOutlet weak var objectId: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    //@IBOutlet weak var yourView: UIView!
+    //yourView.layer.shadowColor = UIColor.blackColor().CGColor
+    //yourView.layer.shadowOpacity = 1
+    //yourView.layer.shadowOffset = CGSizeZero
+    //yourView.layer.shadowRadius = 10
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -30,7 +36,7 @@ class CardUITableViewCell: PFTableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 2
+//    @IBInspectable var cornerRadius: CGFloat = 2
     
 //    @IBInspectable var shadowOffsetWidth: Int = 0
 //    @IBInspectable var shadowOffsetHeight: Int = 3

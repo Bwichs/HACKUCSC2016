@@ -25,27 +25,35 @@ class CardUITableViewController: PFQueryTableViewController {
         image2.addGestureRecognizer(tapGestureRecognizer2)
     */
     
+    var oi : String? = ""
+    var pv : Int? = 0
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let indexPath = tableView.indexPathForSelectedRow
-        
         let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as! CardUITableViewCell
+        print(currentCell.objectId!.text!)
+        oi = currentCell.objectId!.text
         
-        print(currentCell.name!.text)
     }
     
     func image1Tapped(img: AnyObject)
     {
-        let im = img as! UITapGestureRecognizer
-        print("hello")
+        
+        pv = 1
+        //tableView(UITableView,NSIndexPath)
+        //let im = img as! UITapGestureRecognizer
+        //let im = img as! String
+        //print(AnyObject)
         
         //im.fadeOut()
         //image2.fadeIn()
     }
     func image2Tapped(img: AnyObject)
     {
-        let im = img as? UIImageView
-        im!.fadeOut()
+        pv = 2
+        //let im = img as? UITapGestureRecognizer
+        //im!.fadeOut()
         //image2.fadeOut()
         //image1.fadeIn()
     }
@@ -84,8 +92,11 @@ class CardUITableViewController: PFQueryTableViewController {
         
         // Extract values from the PFObject to display in the table cell
         
-        cell.prodDesc.text = object!["productDescription"] as! String
+        cell.prodDesc.text = object!["productDescription"] as? String
         cell.name.text = object!["userName"] as? String
+        cell.objectId.text = object!.objectId
+        
+        print(cell.objectId.text)
         
         //cell.firstImage.image = object!["firstImage"] as! PFFile
         
