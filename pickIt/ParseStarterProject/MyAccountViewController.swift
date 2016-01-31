@@ -8,12 +8,15 @@
 
 import UIKit
 import Parse
+
 class MyAccountViewController: UIViewController {
 
 
     
     @IBOutlet weak var emailValue: UITextField!
     @IBOutlet weak var nameValue: UITextField!
+    
+    @IBOutlet weak var edit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,16 +42,17 @@ class MyAccountViewController: UIViewController {
         emailValue.userInteractionEnabled = false
         nameValue.userInteractionEnabled = false
         editing = false
-        editButtonItem().title = "Edit Account"
+        print("not editing", self.nameValue.text)
+        edit.setTitle("Edit Account", forState: .Normal)
         
         let currentId = PFUser.currentUser()?.objectId
         let query = PFUser.query()
         query!.getObjectInBackgroundWithId(currentId!) {
             (myself: PFObject?, error: NSError?) -> Void in
             if error == nil && myself != nil {
-                myself!["name"] = self.nameValue.text
+                myself!["username"] = self.nameValue.text
                 myself!["email"] = self.emailValue.text
-                
+                print("attempting save")
                 myself!.saveInBackgroundWithBlock {
                     (success, error) -> Void in
                 }
@@ -60,9 +64,12 @@ class MyAccountViewController: UIViewController {
     }
 
     func editingAccount(){
+        print("editing")
+        emailValue.enabled = true
+        nameValue.enabled = true
         emailValue.userInteractionEnabled = true
         nameValue.userInteractionEnabled = true
-        editButtonItem().title = "Save"
+        edit.setTitle("Save", forState: .Normal)
         editing = true
     }
     
@@ -75,8 +82,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func editAccount(sender: AnyObject) {
         if editing == false{
             editingAccount()
-        }
-        if editing == true{
+        }else if editing == true{
             notEditingAccount()
         }
     }
